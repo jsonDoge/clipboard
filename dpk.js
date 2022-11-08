@@ -6,7 +6,7 @@ exports.deterministicPartitionKey = (event) => {
   let candidate;
 
   if (event) {
-    if (event.partitionKey) {
+    if (event.partitionKey || event.partitionKey === 0) {
       candidate = event.partitionKey;
     } else {
       const data = JSON.stringify(event);
@@ -14,7 +14,7 @@ exports.deterministicPartitionKey = (event) => {
     }
   }
 
-  if (candidate) {
+  if (candidate || candidate === 0) {
     if (typeof candidate !== "string") {
       candidate = JSON.stringify(candidate);
     }
