@@ -16,3 +16,22 @@ Based on the information given, break this ticket down into 2-5 individual ticke
 You will be graded on the level of detail in each ticket, the clarity of the execution plan within and between tickets, and the intelligibility of your language. You don't need to be a native English speaker, but please proof-read your work.
 
 ## Your Breakdown Here
+
+### Back-end 
+
+<b>Context:</b> Reports should still use internal Ids for referencing Agents as not all facility agents will have a custom id value. Therefore it will closely resemble a simple text field.
+
+<b>Tickets:</b>
+
+- Add custom id to Agent model. Sub-tasks:
+  - Existing endpoint validation (API / any internal logic).
+  - Add new logic to reports to display custom Id.
+
+### Front-end 
+
+<b>Context:</b> Front-end will likely need an update to allow custom id manipulation.
+
+<b>Tickets:</b>
+
+- Add custom id to Agent forms. Sub-tasks:
+  - Add necessary form fields and validation.
