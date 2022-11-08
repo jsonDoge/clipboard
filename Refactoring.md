@@ -17,3 +17,5 @@ Reverse event checking if. Reversing it will allow to return early and removing 
 Combine nested (candate) and (candidate !== "string") ifs to reduce nesting.
 
 line 12: if event.partitionKey... and line 22: if (candidate ===) are performing same checks we can move string check inside the first check to avoid duplication.
+
+Reversing event.paritionKey check will help to return early and remove the following else case.
