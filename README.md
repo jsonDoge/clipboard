@@ -3,6 +3,25 @@ This project contains two challenges - a "Ticket Breakdown" challenge and a "Ref
 
 ## [Ticket Breakdown](Ticket_Breakdown.md)
 
+### Back-end 
+
+<b>Context:</b> Reports should still use internal Ids for referencing Agents as not all facility agents will have a custom id value. Therefore it will closely resemble a simple text field.
+
+<b>Tickets:</b>
+
+- Add custom id to Agent model. Sub-tasks:
+  - Existing endpoint validation (API / any internal logic).
+  - Add new logic to reports to display custom Id.
+
+### Front-end 
+
+<b>Context:</b> Front-end will likely need an update to allow custom id manipulation.
+
+<b>Tickets:</b>
+
+- Add custom id to Agent forms. Sub-tasks:
+  - Add necessary form fields and validation.
+ 
 ## [Refactoring](Refactoring.md)
 
 If you are a JS novice, here's how to get started:
