@@ -19,3 +19,7 @@ Combine nested (candate) and (candidate !== "string") ifs to reduce nesting.
 line 12: if event.partitionKey... and line 22: if (candidate ===) are performing same checks we can move string check inside the first check to avoid duplication.
 
 Reversing event.paritionKey check will help to return early and remove the following else case.
+
+Maybe more of a personal preference, but ternary assignment will allow to avoid let usage and candidate value reassignment. 
+
+Returning early inside .length > MAX_PARTITION_KEY_LENGTH check to avoid unecessary reassignment.
