@@ -11,13 +11,12 @@ exports.deterministicPartitionKey = (event) => {
 
   if (event.partitionKey || event.partitionKey === 0) {
     candidate = event.partitionKey;
+    if (typeof candidate !== "string") {
+      candidate = JSON.stringify(candidate);
+    }
   } else {
     const data = JSON.stringify(event);
     candidate = crypto.createHash("sha3-512").update(data).digest("hex");
-  }
-
-  if (candidate === 0 || (candidate && typeof candidate !== "string")) {
-    candidate = JSON.stringify(candidate);
   }
 
   if (candidate.length > MAX_PARTITION_KEY_LENGTH) {
