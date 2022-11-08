@@ -15,3 +15,5 @@ Function is behaving unexpectedly when a literal 0 is provided as paritionKey, w
 Reverse event checking if. Reversing it will allow to return early and removing multiple confusing checks.
 
 Combine nested (candate) and (candidate !== "string") ifs to reduce nesting.
+
+line 12: if event.partitionKey... and line 22: if (candidate ===) are performing same checks we can move string check inside the first check to avoid duplication.
