@@ -13,3 +13,5 @@ You will be graded on the exhaustiveness and quality of your unit tests, the dep
 Function is behaving unexpectedly when a literal 0 is provided as paritionKey, which is likely a bug. Adding extra if checks.
 
 Reverse event checking if. Reversing it will allow to return early and removing multiple confusing checks.
+
+Combine nested (candate) and (candidate !== "string") ifs to reduce nesting.
